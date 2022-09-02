@@ -1,0 +1,99 @@
+.container {
+    background: url('../Images/background.jpg');
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  h1 {
+    color: aliceblue;
+    margin: 1em;
+  }
+  
+  .smiley {
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    width: 10em;
+    height: 10em;
+    background-color: bisque;
+    border-radius: 50%;
+  }
+  .smiley::before, .smiley::after {
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: black;
+    top: 3em;
+    animation: eye 3s ease-in-out infinite;
+  }
+  .smiley::before {left: 2.5em;}
+  .smiley::after {right: 2.5em;}
+  @keyframes eye {
+    90% {transform: none;}
+    95% {transform: scaleY(0.1);}
+  }
+  
+
+  .logoGif {
+    width: 20em;
+    background: none;
+  }
+  .menu {
+    position: fixed;
+    left: 100vw;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgray;
+    transition: transform 1s ease-in-out;
+    z-index: 1;
+    opacity: 0.7;
+  }
+  .menuButton {
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    z-index: 10;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding: 1em;
+  }
+  .show {
+    transform: translateX(-100vw);
+   }
+   .bezye {
+    position: fixed;
+    top: 0;
+    right: 0;
+   }
+   .menuButton hr {
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    right: 12px;
+   }
+
+   .line1 {
+    transform: translateY(-8px);
+   }
+   .line3 {
+    transform: translateY(8px);
+   }
+
+   .line1Animate,
+   .line2Animate {
+    transform: rotate(45deg);
+   }
+   .line3Animate {
+    transform: rotate(-45deg);
+   }
+ 
+  .polygon {
+    width: 300px;
+    height: 200px;
+    background-color: aliceblue;
+    clip-path: ellipse(50px at 0 100px);
+  }
